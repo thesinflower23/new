@@ -1,0 +1,1232 @@
+/* Reset default margin and padding for all elements */
+/* box-sizing: border-box includes padding and border in element's total width and height */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    /* Background gradient commented out, but you can use it for page background */
+    /* background: linear-gradient(to right,#0077ff); */
+    font-family: Arial, sans-serif; /* Sets font for the whole page */
+}
+
+/* Header section */
+header {
+    background-image: url(../src/img/backs.jpg); /* Background image for header */
+    height: 50vh; /* Header height set to half the viewport height */
+    display: flex; /* Flexbox to align content */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between left and right items */
+    padding: 40px 10%; /* Padding: 40px top/bottom, 10% left/right */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-size: 100% 100%; /* Stretch background to cover entire header */
+}
+
+.mysite {
+    position: sticky;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and text */
+    font-size: 24px;
+}
+
+.lopg {
+  height: 50px;
+  width: 50px;
+  border-radius: 26px;
+  object-fit: cover;
+}
+/* Header main title */
+header h1 {
+    color: white; /* White text color */
+    margin: auto; /* Center horizontally */
+}
+
+/* Logo container in header */
+.logo {
+    display: flex; /* Flexbox for vertical stacking */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 10px; /* Space between logo elements */
+}
+
+/* Logo image */
+.logo img {
+    width: 500px; /* Fixed width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Logo title inside logo container */
+.logo h1 {
+    color: #FFD1DC; /* Pink color */
+    font-size: 2rem; /* Larger font size */
+}
+
+/* Navigation bar */
+nav {
+    display: flex; /* Flexbox for horizontal layout */
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Vertically center items */
+    background: #222; /* Dark background color */
+    padding: 15px 20px; /* Padding inside nav */
+    position: relative; /* For positioning dropdown or mobile menu */
+    z-index: 1000; /* Make sure nav stays on top */
+}
+
+/* Nav logo text */
+nav .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Nav menu list */
+nav ul {
+    list-style: none; /* Remove bullets */
+    display: flex; /* Horizontal menu items */
+    gap: 20px; /* Space between menu links */
+    transition: max-height 0.3s ease-in-out; /* Smooth toggle effect on mobile */
+}
+
+/* Nav links */
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s; /* Smooth color change on hover */
+}
+
+/* Nav links hover effect */
+nav ul li a:hover {
+    color: #1e90ff; /* Change color on hover */
+}
+
+/* Hamburger menu toggle - hidden by default */
+.menu-toggle {
+    display: none; /* Show only on mobile */
+    flex-direction: column; /* Vertical bars */
+    cursor: pointer;
+}
+
+/* Hamburger bars */
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 4px 0;
+    border-radius: 5px; /* Rounded edges */
+    transition: 0.3s; /* Smooth transition */
+}
+
+/* Banner text styles */
+.banner h2 {
+    font-size: 2.5rem; /* Large heading */
+    margin-bottom: 10px; /* Space below */
+}
+
+.banner p {
+    font-size: 1.2rem; /* Paragraph size */
+    opacity: 0.9; /* Slightly faded */
+    margin-bottom: 20px; /* Space below */
+}
+
+.banner {
+    color: black; /* Text color */
+    text-align: right; /* Align text to right */
+    max-width: 500px; /* Limit width */
+}
+
+/* Header main heading color */
+.headerh1 {
+    color: white;
+}
+
+/* Button styling */
+.btn {
+    background-color: #1e90ff; /* Blue background */
+    font-size: 1.1rem; /* Text size */
+    border-radius: 30px; /* Rounded pill shape */
+    color: white;
+    padding: 12px 28px; /* Vertical and horizontal padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-transform: uppercase; /* Capital letters */
+    transition: 0.3s ease; /* Smooth hover */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #1c7ed6; /* Darker blue */
+    transform: scale(1.1); /* Slightly enlarge */
+}
+
+/* Button focus (keyboard navigation) */
+.btn:focus {
+    outline: none; /* Remove default outline */
+}
+
+/* Cards container */
+.cards {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    margin: 50px auto; /* Vertical spacing and center horizontally */
+    max-width: 1300px; /* Max width container */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+/* Individual card */
+.card {
+    background-color: grey;
+    border-radius: 10px; /* Rounded corners */
+    color: black;
+    padding: 20px; /* Inner spacing */
+    width: 280px; /* Fixed width */
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.3s; /* Smooth hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Shadow */
+}
+
+/* Card hover effect for shadow */
+.card:hover {
+    box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Card title */
+.card h3 {
+    padding: 20px 10px; /* Vertical and horizontal padding */
+}
+
+/* Icon inside card */
+.icon {
+    font-size: 40px; /* Large size */
+    margin-bottom: 15px; /* Space below icon */
+}
+
+/* Button inside card */
+.btsn {
+    color: white;
+    text-decoration: none;
+    background-color: #1c7ed6;
+    border: none;
+    border-radius: 30px;
+    padding: 9px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block; /* Allows margin */
+    margin-top: 10px; /* Space above button */
+}
+
+/* New section container with image and text side by side */
+.new-section {
+    display: flex; /* Flex row */
+    align-items: center; /* Vertically center */
+    gap: 2rem; /* Space between image and text */
+    padding: 60px 10%; /* Padding top/bottom and left/right */
+}
+
+/* About us section background */
+.about-us {
+    background: #333; /* Dark background */
+}
+
+/* Left side container */
+.lefs {
+    flex: 1; /* Takes available space */
+}
+
+/* Left image */
+.leftsd {
+    width: 500px; /* Width of image */
+    max-width: 300px; /* Max width for responsiveness */
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Text inside new section */
+.new-section h3,
+.new-section p,
+.new-section .btsn {
+    color: white;
+    margin: 0 0 1rem 0; /* Bottom margin for spacing */
+}
+
+/* Button style */
+.buttons {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1c7ed6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Testimonials section container */
+.Testimonials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between;
+    gap: 20px;
+    margin: 50px auto;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+
+/* Individual testimonial card */
+.cardes {
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent white */
+    padding: 50px;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px; /* Fixed width */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Testimonial image */
+.img1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circle image */
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Container aligned to right */
+.container-Us {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Main content container */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem; /* Top-bottom and left-right padding */
+}
+
+/* Contact section using grid to put form and map side-by-side */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 4rem; /* Space between columns */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Right padding inside the contact form */
+.contact-form {
+    padding-right: 2rem;
+}
+
+/* Contact form title */
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 300;
+}
+
+/* Each form group (label + input/textarea) */
+.form-group {
+    margin-bottom: 1.5rem; /* Space between fields */
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem; /* Space below label */
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Inputs and textarea style */
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width */
+    padding: 0.8rem 0; /* Vertical padding */
+    border: none;
+    border-bottom: 1px solid #ddd; /* Underline style */
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Border color changes on focus for inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #007bff; /* Blue underline on focus */
+}
+
+/* Textarea specific styles */
+.form-group textarea {
+    resize: vertical; /* User can resize vertically */
+    min-height: 100px; /* Minimum height */
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 1rem; /* Space above button */
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Map section container */
+.map-section {
+    position: relative; /* For absolute positioning if needed */
+}
+
+/* Map placeholder background */
+.map-placeholder {
+    width: 100%;
+    height: 400px; /* Fixed height */
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contact information below map */
+.contact-info {
+    margin-top: 2rem; /* Space above */
+}
+
+/* Each contact info row */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+/* Icon for contact info */
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 50%; /* Circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem; /* Space between icon and text */
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Text next to icon */
+.contact-text {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #222;
+    color: #eee;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Container for footer columns */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between footer columns */
+}
+
+/* Individual footer column */
+.footer-column {
+    flex: 1 1 160px; /* Flexible but minimum width 160px */
+    min-width: 160px;
+}
+
+/* Footer column titles */
+.footer-column h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Footer links list */
+.footer-column ul {
+    list-style: none; /* No bullets */
+    padding: 0;
+}
+
+/* Each footer list item */
+.footer-column ul li {
+    margin-bottom: 10px; /* Space between items */
+}
+
+/* Footer links */
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Footer link hover */
+.footer-column ul li a:hover {
+    color: #007bff;
+}
+
+/* Footer bottom copyright */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+/* Responsive styles */
+
+/* For screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    /* Contact section stacks vertically */
+    .contact-section {
+        grid-template-columns: 1fr; /* One column */
+        gap: 2rem; /* Smaller gap */
+        padding: 2rem;
+    }
+
+    .contact-form {
+        padding-right: 0; /* Remove right padding on smaller screens */
+    }
+
+    /* New section stacks vertically */
+    .new-section {
+        flex-direction: column; /* Stack items */
+        text-align: center;
+    }
+
+    /* Left side image responsive */
+    .leftsd {
+        max-width: 100%; /* Full width */
+    }
+
+    /* Testimonials stack vertically */
+    .Testimonials {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Responsive testimonial image */
+    .img1 {
+        max-width: 100%;
+    }
+
+    /* Navigation menu for mobile */
+    nav ul {
+        position: absolute;
+        top: 60px; /* Below the nav */
+        left: 0;
+        width: 100%;
+        flex-direction: column; /* Vertical menu */
+        background: #222;
+        overflow: hidden;
+        max-height: 0; /* Hidden by default */
+    }
+
+    /* When menu is active (open) */
+    nav ul.active {
+        max-height: 500px; /* Show menu */
+    }
+
+    /* Menu list items take full width */
+    nav ul li {
+        width: 100%;
+    }
+
+    /* Menu links become block with padding */
+    nav ul li a {
+        display: block;
+        padding: 15px;
+        border-top: 1px solid #333; /* Divider between items */
+    }
+
+    /* Show hamburger toggle */
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+
+
+(/* ==========================================================================
+   UNIVERSAL RESET - This removes browser default styles for consistency
+   ========================================================================== */
+
+/* Reset default margin and padding for all elements */
+/* box-sizing: border-box includes padding and border in element's total width and height */
+* {
+    margin: 0;                    /* Removes default margins from all elements */
+    padding: 0;                  /* Removes default padding from all elements */
+    box-sizing: border-box;      /* Makes width/height calculations include padding & borders - VERY IMPORTANT! */
+}
+
+/* ==========================================================================
+   BODY STYLES - Base styles that affect the entire page
+   ========================================================================== */
+
+/* Body styles */
+body {
+    /* Background gradient commented out, but you can use it for page background */
+    /* background: linear-gradient(to right,#0077ff); */
+    font-family: Arial, sans-serif; /* Sets font for the whole page - inherited by all child elements */
+}
+
+/* ==========================================================================
+   HEADER SECTION - Hero area with background image and main content
+   ========================================================================== */
+
+/* Header section */
+header {
+    background-image: url(../src/img/backs.jpg); /* Background image for header */
+    height: 50vh;                /* Header height = half the viewport height (responsive!) */
+    display: flex;               /* Flexbox layout - allows easy alignment of child elements */
+    align-items: center;         /* Vertically center all items in the header */
+    justify-content: space-between; /* Spreads items apart - left side, center, right side */
+    padding: 40px 10%;          /* Padding: 40px top/bottom, 10% left/right (responsive padding) */
+    background-repeat: no-repeat; /* Prevents background image from repeating/tiling */
+    background-size: 100% 100%;  /* Stretches background to cover entire header (may distort image) */
+}
+
+/* Site branding/logo area in header */
+.mysite {
+    position: sticky;            /* Keeps element visible when user scrolls (sticks to top) */
+    color: white;               /* White text color for contrast against dark background */
+    display: flex;              /* Flexbox for horizontal layout of logo + text */
+    align-items: center;        /* Vertically centers logo and text */
+    gap: 10px;                 /* 10px space between logo image and text */
+    font-size: 24px;           /* Large font size for brand name */
+}
+
+/* Logo image styling */
+.lopg {
+    height: 50px;              /* Fixed height for logo */
+    width: 50px;               /* Fixed width for logo (creates square) */
+    border-radius: 26px;       /* Makes logo circular (26px = roughly half of 50px) */
+    object-fit: cover;         /* Ensures image covers area without distortion */
+}
+
+/* Header main title */
+header h1 {
+    color: white;              /* White text color for visibility against background */
+    margin: auto;              /* Centers the h1 horizontally within its flex container */
+}
+
+/* Logo container in header - used for larger logo displays */
+.logo {
+    display: flex;             /* Flexbox layout */
+    flex-direction: column;    /* Stacks children vertically (logo above text) */
+    align-items: flex-start;   /* Aligns items to the left side */
+    gap: 10px;                /* 10px space between logo elements */
+}
+
+/* Large logo image */
+.logo img {
+    width: 500px;             /* Fixed width - NOTE: This seems very large! */
+    height: auto;             /* Maintains aspect ratio automatically */
+}
+
+/* Logo title inside logo container */
+.logo h1 {
+    color: #FFD1DC;           /* Light pink color for logo text */
+    font-size: 2rem;          /* Large font size (2 times the root font size) */
+}
+
+/* ==========================================================================
+   NAVIGATION BAR - Main site navigation with mobile responsiveness
+   ========================================================================== */
+
+/* Navigation bar */
+nav {
+    display: flex;                    /* Flexbox for horizontal layout */
+    justify-content: space-between;   /* Spreads logo and menu apart */
+    align-items: center;             /* Vertically centers nav items */
+    background: #222;                /* Dark gray background */
+    padding: 15px 20px;             /* Internal spacing inside nav */
+    position: relative;              /* Creates positioning context for dropdown/mobile menu */
+    z-index: 1000;                  /* High z-index ensures nav stays above other content */
+}
+
+/* Nav logo text */
+nav .logo {
+    color: white;             /* White text for contrast */
+    font-size: 1.5rem;       /* Medium-large font size */
+    font-weight: bold;       /* Makes text bold/thick */
+}
+
+/* Nav menu list container */
+nav ul {
+    list-style: none;                    /* Removes bullet points from list */
+    display: flex;                       /* Horizontal layout for menu items */
+    gap: 20px;                          /* 20px space between each menu item */
+    transition: max-height 0.3s ease-in-out; /* Smooth animation for mobile menu toggle */
+}
+
+/* Individual nav links */
+nav ul li a {
+    text-decoration: none;     /* Removes underline from links */
+    color: white;             /* White text color */
+    font-size: 1rem;          /* Standard font size */
+    transition: color 0.3s;   /* Smooth color transition on hover (0.3 seconds) */
+}
+
+/* Nav links hover effect - provides user feedback */
+nav ul li a:hover {
+    color: #1e90ff;          /* Changes to blue color when user hovers */
+}
+
+/* Hamburger menu toggle - mobile menu icon */
+.menu-toggle {
+    display: none;           /* Hidden on desktop screens */
+    flex-direction: column;  /* Stacks the three bars vertically */
+    cursor: pointer;         /* Shows pointer cursor to indicate clickability */
+}
+
+/* Hamburger menu bars - the three horizontal lines */
+.menu-toggle span {
+    height: 3px;            /* Thin bars */
+    width: 25px;            /* Standard hamburger width */
+    background: white;       /* White bars for visibility */
+    margin: 4px 0;          /* Vertical spacing between bars */
+    border-radius: 5px;     /* Slightly rounded edges */
+    transition: 0.3s;       /* Smooth transition for animation effects */
+}
+
+/* ==========================================================================
+   BANNER/HERO TEXT - Main headline and call-to-action area
+   ========================================================================== */
+
+/* Banner heading styling */
+.banner h2 {
+    font-size: 2.5rem;       /* Very large heading text */
+    margin-bottom: 10px;     /* Space below heading */
+}
+
+/* Banner paragraph text */
+.banner p {
+    font-size: 1.2rem;       /* Slightly larger than normal text */
+    opacity: 0.9;           /* Slightly transparent (90% opacity) for softer look */
+    margin-bottom: 20px;     /* Space below paragraph */
+}
+
+/* Banner container - controls overall banner layout */
+.banner {
+    color: black;            /* Black text color */
+    text-align: right;       /* Right-aligns all text in banner */
+    max-width: 500px;        /* Limits banner width for better readability */
+}
+
+/* Header main heading color override */
+.headerh1 {
+    color: white;           /* Ensures header h1 is white */
+}
+
+/* ==========================================================================
+   BUTTONS - Styled call-to-action buttons with hover effects
+   ========================================================================== */
+
+/* Primary button styling */
+.btn {
+    background-color: #1e90ff;  /* Bright blue background */
+    font-size: 1.1rem;         /* Slightly larger text */
+    border-radius: 30px;       /* Very rounded corners (pill shape) */
+    color: white;              /* White text */
+    padding: 12px 28px;        /* Vertical: 12px, Horizontal: 28px padding */
+    border: none;              /* Removes default button border */
+    cursor: pointer;           /* Pointer cursor indicates clickability */
+    text-transform: uppercase; /* Makes all text UPPERCASE */
+    transition: 0.3s ease;     /* Smooth transition for all hover effects */
+}
+
+/* Button hover effect - visual feedback for user interaction */
+.btn:hover {
+    background-color: #1c7ed6; /* Slightly darker blue on hover */
+    transform: scale(1.1);     /* Enlarges button by 10% - creates "pop" effect */
+}
+
+/* Button focus state - for keyboard navigation accessibility */
+.btn:focus {
+    outline: none;            /* Removes default browser focus outline */
+    /* NOTE: Should add custom focus styles for accessibility */
+}
+
+/* ==========================================================================
+   CARDS SECTION - Grid of service/feature cards
+   ========================================================================== */
+
+/* Cards container - holds all cards */
+.cards {
+    display: flex;              /* Flexbox layout */
+    justify-content: center;    /* Centers cards horizontally */
+    gap: 20px;                 /* 20px space between cards */
+    flex-wrap: wrap;           /* Allows cards to wrap to new lines on smaller screens */
+    margin: 50px auto;         /* 50px top/bottom margin, auto centers container */
+    max-width: 1300px;         /* Maximum container width */
+    padding: 0 20px;           /* 20px left/right padding */
+}
+
+/* Individual card styling */
+.card {
+    background-color: grey;     /* Gray background - could be improved with lighter color */
+    border-radius: 10px;       /* Rounded corners */
+    color: black;              /* Black text */
+    padding: 20px;             /* Internal spacing */
+    width: 280px;              /* Fixed width for consistent card sizes */
+    box-sizing: border-box;    /* Includes padding in width calculation */
+    text-align: center;        /* Centers text within card */
+    transition: 0.3s;          /* Smooth transition for hover effects */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Drop shadow for depth */
+}
+
+/* Card hover effect - enhances user interaction */
+.card:hover {
+    box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2); /* Larger shadow on hover */
+}
+
+/* Card title styling */
+.card h3 {
+    padding: 20px 10px;        /* Vertical: 20px, Horizontal: 10px padding */
+}
+
+/* Icon inside card */
+.icon {
+    font-size: 40px;          /* Large icon size */
+    margin-bottom: 15px;      /* Space below icon */
+}
+
+/* Button inside card - secondary button style */
+.btsn {
+    color: white;                /* White text */
+    text-decoration: none;       /* No underline (for links) */
+    background-color: #1c7ed6;   /* Blue background */
+    border: none;               /* No border */
+    border-radius: 30px;        /* Pill-shaped */
+    padding: 9px 15px;          /* Smaller padding than main button */
+    cursor: pointer;            /* Pointer cursor */
+    text-transform: uppercase;   /* Uppercase text */
+    display: inline-block;      /* Allows margin and behaves like button */
+    margin-top: 10px;           /* Space above button */
+}
+
+/* ==========================================================================
+   ABOUT US SECTION - Two-column layout with image and text
+   ========================================================================== */
+
+/* New section container - flexible two-column layout */
+.new-section {
+    display: flex;              /* Flexbox layout */
+    align-items: center;        /* Vertically centers content */
+    gap: 2rem;                 /* 2rem (32px) space between columns */
+    padding: 60px 10%;         /* Large padding: 60px top/bottom, 10% sides */
+}
+
+/* About us section background */
+.about-us {
+    background: #333;          /* Dark gray background to distinguish section */
+}
+
+/* Left side container - for image */
+.lefs {
+    flex: 1;                  /* Takes up equal space in flex container */
+}
+
+/* Left side image */
+.leftsd {
+    width: 500px;             /* Desired width */
+    max-width: 300px;         /* Maximum width (overrides width on small screens) */
+    height: auto;             /* Maintains aspect ratio */
+    border-radius: 8px;       /* Slightly rounded corners */
+}
+
+/* Text styling inside new section */
+.new-section h3,
+.new-section p,
+.new-section .btsn {
+    color: white;                    /* White text for contrast on dark background */
+    margin: 0 0 1rem 0;             /* Bottom margin only (1rem = 16px) */
+}
+
+/* Additional button style */
+.buttons {
+    display: inline-block;      /* Allows margin and padding */
+    padding: 10px 20px;        /* Internal spacing */
+    background: #1c7ed6;       /* Blue background */
+    color: white;              /* White text */
+    text-decoration: none;     /* No underline */
+    border-radius: 5px;        /* Slightly rounded corners */
+}
+
+/* ==========================================================================
+   TESTIMONIALS SECTION - Customer review cards
+   ========================================================================== */
+
+/* Testimonials container */
+.Testimonials {
+    display: flex;                    /* Flexbox layout */
+    flex-direction: row;             /* Horizontal arrangement */
+    flex-wrap: wrap;                 /* Allows wrapping on smaller screens */
+    justify-content: space-between;   /* Spreads testimonials evenly */
+    gap: 20px;                      /* Space between testimonials */
+    margin: 50px auto;              /* Vertical margin and horizontal centering */
+    max-width: 1300px;              /* Maximum container width */
+    padding: 0 20px;                /* Horizontal padding */
+}
+
+/* Individual testimonial card */
+.cardes {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    padding: 50px;                               /* Large internal padding */
+    justify-content: space-evenly;               /* Even spacing inside card */
+    border-radius: 10px;                        /* Rounded corners */
+    text-align: center;                         /* Centered text */
+    width: 350px;                               /* Fixed width */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);     /* Subtle shadow */
+}
+
+/* Testimonial profile image */
+.img1 {
+    width: 100px;             /* Fixed width */
+    height: 100px;            /* Fixed height (creates square) */
+    border-radius: 50%;       /* Makes image perfectly circular */
+    margin-bottom: 15px;      /* Space below image */
+    object-fit: cover;        /* Ensures image covers area without distortion */
+}
+
+/* Container aligned to right */
+.container-Us {
+    display: flex;            /* Flexbox layout */
+    justify-content: flex-end; /* Aligns content to the right */
+}
+
+/* ==========================================================================
+   MAIN CONTENT CONTAINER - General content wrapper
+   ========================================================================== */
+
+/* Main content container */
+.main-content {
+    max-width: 1200px;        /* Maximum width for content */
+    margin: 0 auto;           /* Centers container horizontally */
+    padding: 3rem 2rem;       /* Top/bottom: 3rem (48px), Left/right: 2rem (32px) */
+}
+
+/* ==========================================================================
+   CONTACT SECTION - Form and map side-by-side using CSS Grid
+   ========================================================================== */
+
+/* Contact section using grid layout */
+.contact-section {
+    display: grid;                    /* CSS Grid layout */
+    grid-template-columns: 1fr 1fr;   /* Two equal columns (1fr = 1 fraction of available space) */
+    gap: 4rem;                       /* 4rem (64px) gap between columns */
+    background-color: #fff;          /* White background */
+    border-radius: 10px;             /* Rounded corners */
+    padding: 3rem;                   /* Internal padding */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for elevation */
+}
+
+/* Contact form padding adjustment */
+.contact-form {
+    padding-right: 2rem;      /* Extra padding on right side */
+}
+
+/* Contact form title */
+.contact-form h2 {
+    font-size: 2rem;          /* Large heading */
+    margin-bottom: 2rem;      /* Space below heading */
+    color: #333;              /* Dark gray text */
+    font-weight: 300;         /* Light font weight */
+}
+
+/* Form field grouping */
+.form-group {
+    margin-bottom: 1.5rem;    /* Space between form fields */
+}
+
+/* Form labels styling */
+.form-group label {
+    display: block;            /* Makes label take full width */
+    margin-bottom: 0.5rem;     /* Space below label */
+    color: #666;              /* Medium gray text */
+    font-size: 0.9rem;        /* Slightly smaller text */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px;      /* Adds space between letters */
+}
+
+/* Form inputs and textarea styling - modern underline design */
+.form-group input,
+.form-group textarea {
+    width: 100%;                    /* Full width of container */
+    padding: 0.8rem 0;             /* Vertical padding only */
+    border: none;                  /* Removes all borders */
+    border-bottom: 1px solid #ddd; /* Only bottom border (underline style) */
+    background: transparent;        /* Transparent background */
+    font-size: 1rem;               /* Standard font size */
+    outline: none;                 /* Removes default focus outline */
+    transition: border-color 0.3s; /* Smooth color transition */
+}
+
+/* Focus state for inputs - provides user feedback */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #007bff;   /* Blue underline when focused */
+}
+
+/* Textarea specific styling */
+.form-group textarea {
+    resize: vertical;         /* Allows user to resize vertically only */
+    min-height: 100px;        /* Minimum height */
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #007bff;     /* Blue background */
+    color: white;                  /* White text */
+    padding: 0.8rem 2rem;         /* Vertical and horizontal padding */
+    border: none;                  /* No border */
+    border-radius: 5px;           /* Slightly rounded corners */
+    cursor: pointer;              /* Pointer cursor */
+    font-size: 1rem;              /* Standard font size */
+    transition: background-color 0.3s; /* Smooth color transition */
+    margin-top: 1rem;             /* Space above button */
+}
+
+/* Submit button hover effect */
+.submit-btn:hover {
+    background-color: #0056b3;    /* Darker blue on hover */
+}
+
+/* ==========================================================================
+   MAP SECTION - Placeholder for interactive map
+   ========================================================================== */
+
+/* Map section container */
+.map-section {
+    position: relative;       /* For absolute positioning of child elements if needed */
+}
+
+/* Map placeholder with gradient background */
+.map-placeholder {
+    width: 100%;                                        /* Full width */
+    height: 400px;                                      /* Fixed height */
+    background: linear-gradient(135deg, #74b9ff, #0984e3); /* Blue gradient background */
+    border-radius: 10px;                                /* Rounded corners */
+    position: relative;                                 /* Positioning context */
+    overflow: hidden;                                   /* Hides content outside borders */
+}
+
+/* Contact information below map */
+.contact-info {
+    margin-top: 2rem;         /* Space above contact info */
+}
+
+/* Individual contact info items */
+.contact-item {
+    display: flex;            /* Flexbox for icon and text alignment */
+    align-items: center;      /* Vertically centers icon and text */
+    margin-bottom: 1rem;      /* Space between contact items */
+    padding: 0.5rem;          /* Internal padding */
+}
+
+/* Contact info icons */
+.contact-icon {
+    width: 40px;                      /* Fixed width */
+    height: 40px;                     /* Fixed height (creates square) */
+    background-color: #007bff;        /* Blue background */
+    border-radius: 50%;               /* Makes icon circular */
+    display: flex;                    /* Flexbox for centering icon */
+    align-items: center;              /* Vertically centers icon */
+    justify-content: center;          /* Horizontally centers icon */
+    margin-right: 1rem;               /* Space between icon and text */
+    color: white;                     /* White icon color */
+    font-size: 0.9rem;                /* Icon size */
+}
+
+/* Contact info text */
+.contact-text {
+    color: #666;              /* Medium gray text */
+    font-size: 0.9rem;        /* Slightly smaller font */
+}
+
+/* ==========================================================================
+   FOOTER - Site footer with multiple columns
+   ========================================================================== */
+
+/* Main footer styles */
+.footer {
+    background-color: #222;    /* Dark gray background */
+    color: #eee;              /* Light gray text */
+    padding: 40px 20px;       /* Large padding */
+    font-family: Arial, sans-serif; /* Font family */
+    font-size: 14px;          /* Smaller font size */
+}
+
+/* Footer container for columns */
+.footer-container {
+    max-width: 1200px;              /* Maximum width */
+    margin: 0 auto;                 /* Centers container */
+    display: flex;                  /* Flexbox layout */
+    justify-content: space-between; /* Spreads columns evenly */
+    flex-wrap: wrap;                /* Allows wrapping on smaller screens */
+    gap: 30px;                      /* Space between columns */
+}
+
+/* Individual footer columns */
+.footer-column {
+    flex: 1 1 160px;          /* Flexible width, minimum 160px */
+    min-width: 160px;         /* Minimum column width */
+}
+
+/* Footer column headings */
+.footer-column h4 {
+    font-weight: bold;        /* Bold text */
+    margin-bottom: 15px;      /* Space below heading */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px;      /* Letter spacing */
+    color: #fff;              /* White text */
+}
+
+/* Footer links lists */
+.footer-column ul {
+    list-style: none;         /* No bullet points */
+    padding: 0;               /* No padding */
+}
+
+/* Footer list items */
+.footer-column ul li {
+    margin-bottom: 10px;      /* Space between items */
+}
+
+/* Footer links styling */
+.footer-column ul li a {
+    color: #ccc;                    /* Light gray color */
+    text-decoration: none;          /* No underline */
+    transition: color 0.3s;         /* Smooth color transition */
+}
+
+/* Footer links hover effect */
+.footer-column ul li a:hover {
+    color: #007bff;           /* Blue color on hover */
+}
+
+/* Footer bottom section - copyright */
+.footer-bottom {
+    max-width: 1200px;        /* Maximum width */
+    margin: 20px auto 0;      /* Top margin, centered horizontally */
+    text-align: center;       /* Centered text */
+    color: #888;              /* Medium gray */
+    font-size: 13px;          /* Small font size */
+    border-top: 1px solid #444; /* Top border separator */
+    padding-top: 15px;        /* Padding above text */
+}
+
+/* ==========================================================================
+   RESPONSIVE STYLES - Mobile and tablet adaptations
+   ========================================================================== */
+
+/* Media query for screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    
+    /* Contact section becomes single column on mobile */
+    .contact-section {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 2rem;                  /* Smaller gap */
+        padding: 2rem;              /* Smaller padding */
+    }
+
+    /* Remove extra padding on mobile */
+    .contact-form {
+        padding-right: 0;     /* Remove right padding on smaller screens */
+    }
+
+    /* About section stacks vertically on mobile */
+    .new-section {
+        flex-direction: column;   /* Stack items vertically */
+        text-align: center;       /* Center text */
+    }
+
+    /* Images become full width on mobile */
+    .leftsd {
+        max-width: 100%;          /* Full width on mobile */
+    }
+
+    /* Testimonials stack vertically on mobile */
+    .Testimonials {
+        flex-direction: column;   /* Vertical stacking */
+        text-align: center;       /* Centered text */
+    }
+
+    /* Testimonial images responsive */
+    .img1 {
+        max-width: 100%;          /* Full width if needed */
+    }
+
+    /* Mobile navigation menu - hidden by default */
+    nav ul {
+        position: absolute;       /* Positioned relative to nav */
+        top: 60px;               /* Below the navigation bar */
+        left: 0;                 /* Aligned to left edge */
+        width: 100%;             /* Full width */
+        flex-direction: column;   /* Stack menu items vertically */
+        background: #222;         /* Same background as nav */
+        overflow: hidden;         /* Hide content when collapsed */
+        max-height: 0;           /* Collapsed by default (height = 0) */
+    }
+
+    /* When mobile menu is active/open */
+    nav ul.active {
+        max-height: 500px;        /* Expands to show menu items */
+    }
+
+    /* Mobile menu items take full width */
+    nav ul li {
+        width: 100%;              /* Full width list items */
+    }
+
+    /* Mobile menu links styling */
+    nav ul li a {
+        display: block;           /* Block display for full-width clickable area */
+        padding: 15px;            /* Large padding for easier touch targets */
+        border-top: 1px solid #333; /* Separator line between menu items */
+    }
+
+    /* Show hamburger menu on mobile */
+    .menu-toggle {
+        display: flex;            /* Show the hamburger icon */
+    }
+})
